@@ -53,7 +53,7 @@ This book requires Python 3.12+ and Django 5.
 
 The book covers a wide range of web app development topics divided into four different Django projects:
 
-- **Blog Application** (chapters 1-3): Create a complete blog application
+- **1 Blog Application** (chapters 1-3): Create a complete blog application
   - Build data models, views, and URLs
   - Implement an administration site for your blog
   - Use canonical URLs for modles and implement SEO-friendly URLs for posts
@@ -65,7 +65,7 @@ The book covers a wide range of web app development topics divided into four dif
   - Create a sitemap and a RSS feed for your blog
   - Implement a full-text search engine using PostgreSQL
 
-- **Social Website** (chapters 4-7): Create a website to bookmark and share images
+- **2 Social Website** (chapters 4-7): Create a website to bookmark and share images
   - Implement authentication using the Django authentication framework
   - Extend the user model with a custom profile model
   - Use the Diango messages framework
@@ -84,7 +84,7 @@ The book covers a wide range of web app development topics divided into four dif
   - Count image views with [Redis](https://redis.io/)
   - Build an image ranking with Redis
 
-- **Ecommerce Application** (chapters 8-11): Create a fully-featured on-line shop
+- **3 Ecommerce Application** (chapters 8-11): Create a fully-featured on-line shop
   - Build the models of the product catalog
   - Create a shopping cart using Django sessions
   - Create custom context processors
@@ -106,7 +106,7 @@ The book covers a wide range of web app development topics divided into four dif
   - Translate models using [django-parler](https://github.com/django-parler/django-parler)
   - Localize forms using [django-localflavor](https://github.com/django/django-localflavor)
 
-- **eLearning Platform** (chapters 12-17): Create an eLearning platform including a CMS
+- **4 eLearning Platform** (chapters 12-17): Create an eLearning platform including a CMS
   - Build course models
   - Create and use data fixtures
   - Use model inheritance to create polymorphic Content
