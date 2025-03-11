@@ -15,3 +15,30 @@ services:
       DJANGO_SUPERUSER_PASSWORD: password
     ports:
       - "8000:8000"
+    depends_on:
+      - rabbitmq
+    
+  rabbitmq:
+    image: rabbitmq:3.13.1-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"  # AMQP protocol port
+      - "15672:15672"  # Management UI port
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    restart: always
+
+
+  celery:
+    extends:
+      service: web    
+    working_dir: /code/myshop
+    depends_on:
+      - rabbitmq
+    command: celery -A myshop worker -l info
+
+    environment:
+      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672//
+      - CELERY_RESULT_BACKEND=rpc://
+
